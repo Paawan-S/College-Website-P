@@ -7,7 +7,9 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-image: url("https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20-1.jpg") ;
 }
+
 
 .container {
   width: 90%;
@@ -16,33 +18,64 @@ body {
 }
 
 header {
-  background: #003366;
+  background: #2B3467;
   color: #fff;
   padding: 1em 0;
+  align-items:flex-end;
+}
+
+#i1{
+    width:150px;
+    height:50px;
+}
+
+#navflex{
+    display:flex;
+    flex-basis:content;
+}
+
+#navlogo{
+    width:20%;
 }
 
 header h1 {
   text-align: center;
 }
+.navbuttons{
+    padding:5px 15px;
+    justify-content: right;
+    border-radius:10px;
+    color:white;
+    background-color: black;
+    transition: transform 0.2s ease-in-out;
+}
 
-.nav-links {
+.navbuttons:hover{
+    background-color:skyblue;
+    transition:0.4s;
+    transform:scale(1.07);
+}
+
+.navbut {
+  width:75%;
   display: flex;
-  justify-content: center;
+  align-items: right;
   list-style: none;
   margin-top: 0.5em;
 }
 
-.nav-links li {
+.navbut li {
   margin: 0 15px;
 }
 
-.nav-links a {
+.navbut a {
   color: #fff;
   text-decoration: none;
 }
 
 .hero {
-  background: #f4f4f4;
+    background-color: white;
+    opacity:0.75;
   padding: 2em 0;
   text-align: center;
 }
@@ -56,7 +89,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .nav-links {
     flex-direction: column;
     align-items: center;
