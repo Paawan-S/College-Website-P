@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>College Branch Box</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container"> 
-        <nav>
-        <div id="navflex">
-            <div id="navlogo"><img id="i1" src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png"></div> 
-            <div id="NBA"><img id="i2" src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png"></div>
-        <div class="navbut">
-          <li><button class="navbuttons" href="index.html">Home</a></li>
-          <li><button class="navbuttons" href="about.html">About</a></li>
-          <li><button class="navbuttons" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    </div>
-  </header>
 
-  <main class="hero">
-    <div class="container">
-      <h2>Welcome to LNCT Group</h2>
-      <p>Empowering future leaders through knowledge and innovation.</p>
-    </div>
-  </main>
+<div class="branch-box" onclick="openLink()">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYuzyrlnxbjVC7Eab5FO9t91YZ3EE2fqBdUw&s" alt="Branch Image">
+  <div class="branch-name">LNCT World Schools</div>
+  <!-- Stylized right arrow SVG -->
+  <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
-  <!-- <footer>
-    <div class="container">
-      <p>&copy; 2025 LNCT. All rights reserved.</p> 
-    </div>
-  </footer> -->
+<script>
+  function openLink() {
+    window.open("https://www.lnctworldschools.com/", "_blank");
+  }
+</script>
+
 </body>
 </html>
+
