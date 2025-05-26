@@ -2,40 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>LNCT College</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
-  <header>
-    <div class="container"> 
-        <nav>
-        <div id="navflex">
-            <div id="navlogo"><img id="i1" src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png"></div> 
-            <div id="NBA"><img id="i2" src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png"></div>
-        <div class="navbut">
+
+
+  <nav>
+    <div class="logo-area">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png" alt="LNCT Logo">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px; width: auto;">
+    </div>
+
+    <div class="navbut">
           <li><button class="navbuttons" href="index.html">Home</a></li>
           <li><button class="navbuttons" href="about.html">About</a></li>
           <li><button class="navbuttons" href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </div>
-    </div>
-  </header>
-  
-  <main class="hero">
-    <div class="container">
-      <h2>Welcome to LNCT Group</h2>
-      <p>Empowering future leaders through knowledge and innovation.</p>
-    </div>
-  </main>
-  
 
-  <!-- <footer>
-    <div class="container">
-      <p>&copy; 2025 LNCT. All rights reserved.</p> 
+  </nav>
+
+ 
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Welcome to LNCT</h1>
+      <p>Empowering future leaders through education</p>
     </div>
-  </footer> -->
+  </section>
+
+  <div class="container2">
+    <center><h1>Our Institute & Branch</h1></center>
+    <div class="slider-container">
+  <div class="slider-track">
+   
+
+    <div class="branch-box" onclick="openLink('https://example.com/1')">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg" alt="Branch">
+      <div class="branch-name">LNCT Main</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/2')">
+      <img src="https://images.shiksha.com/mediadata/images/1541656669phpZ7N9Og_g.jpg" alt="Branch">
+      <div class="branch-name">LNCT&S</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/3')">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-10-768x351.jpg" alt="Branch">
+      <div class="branch-name">LNCT&E</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/4')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnQWrNZcYlasU--yRjkVIxMOLwMaYAynyew&s" alt="Branch">
+      <div class="branch-name">LNCP</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/5')">
+      <img src="https://www.lnctindore.com/_next/image?url=%2Fbuilding2.png&w=1920&q=75" alt="Branch">
+      <div class="branch-name">LNCT indore</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+   
+    <div class="branch-box" onclick="openLink('https://example.com/6')">
+      <img src="https://images.shiksha.com/mediadata/images/1491288936phpqGhLRd.jpeg" alt="Branch">
+      <div class="branch-name">JNCT Bhopal</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/7')">
+      <img src="https://lnctu.ac.in/wp-content/uploads/2024/09/LNCT-A-scaled-1-1024x528.jpg" alt="Branch">
+      <div class="branch-name">LNCT University</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/8')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYuzyrlnxbjVC7Eab5FO9t91YZ3EE2fqBdUw&s" alt="Branch">
+      <div class="branch-name">LNCT World Of School</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://example.com/9')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGXuf949bE3Q4JnwOcqgrmQohQUGJM2o-mtSVV8aMH0bnFg6XB_RkNqWwHH--wUh9v4rI&usqp=CAU" alt="Branch">
+      <div class="branch-name">LNCT-MCA</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="branch-box" onclick="openLink('https://lnctvu.ac.in/')">
+      <img src="https://image-static.collegedunia.com/public/college_data/images/appImage/1655126587Screenshot20220613185201.png?h=260&w=360&mode=crop" alt="Branch">
+      <div class="branch-name">LNCT  Vidhyapeeth University</div>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+  <section class="about-section" id="about">
+    <img src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg" alt="About" data-aos="fade-right">
+    <div class="about-text" data-aos="fade-left">
+      <h2>About LNCT</h2>
+      <p>LNCT Group of Colleges is a premier institute nurturing talent and shaping the future with innovation and discipline. Our mission is to empower students with knowledge and skills to succeed in life.</p>
+    </div>
+  </section>
+
+ 
+  <div class="counter-section">
+    <div>
+      <div class="counter" data-target="117">0</div>
+      <div class="label">NIRF All India Rank</div>
+    </div>
+    <div>
+      <div class="counter" data-target="10">0</div>
+      <div class="label">Offers For 2024 Batch</div>
+    </div>
+    <div>
+      <div class="counter" data-target="5000">0</div>
+      <div class="label">Students</div>
+    </div>
+  </div>
+
+  
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <footer>
+    &copy; 2025 LNCT Group | Designed by Your Name
+  </footer>
+
+ 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+  
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const update = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100;
+
+        if (current < target) {
+          counter.innerText = `${Math.ceil(current + increment)}`;
+          setTimeout(update, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+
+  </script>
 </body>
 </html>
