@@ -1,9 +1,7 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -11,67 +9,62 @@ body {
   line-height: 1.6;
 }
 
-.background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20-1.jpg");
-  opacity: 0.6;
-  z-index: -1;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-header {
-  background: #2B3467;
-  color: #fff;
-  padding: 1em 0;
-  align-items:flex-end;
-  background: linear-gradient(to bottom, #2B3467, #A73AA4E8);
+html{
+  scroll-behavior:smooth;
 }
 
 #i1{
-    width:150px;
-    height:50px;
+  padding-left:1rem;
+  width:150px;
+  height:50px;
 }
 
 #navflex{
-    display:flex;
+  display:flex;
 }
 
 #i2{
-    margin-left:38px;
-    width:80px;
-    height:30px;
+  margin-left:38px;
+  width:80px;
+  height:30px;
 }
 
-header h1 {
+header {
+  padding: 1rem 0;
+  background: linear-gradient(to bottom, #2B3467, #81387ee8);
 }
-
 .navbuttons{
-    padding:5px 15px;
-    justify-content: right;
-    border-radius:10px;
-    color: white;
-    background-color: transparent;
-    transition: transform 0.2s ease-in-out;
+  padding:10px 25px;
+  justify-content: right;
+  border-radius:15px;
+  color: white;
+  font-size: medium;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
 }
 
 .navbuttons:hover{
-    background-color:skyblue;
-    transition:0.4s;
-    transform:scale(1.07);
+  background-color:skyblue;
+  transition:0.4s;
+  transform:scale(1.07);
+}
+
+#darkmode-btn {
+  border: none;
+  color:black;
+  background-color: inherit;
+  top:1rem;
+  right: 1rem;
+  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .navbut {
-  padding-left: 50vw;
+  align-items:end;
+  width:40%;
   display: flex;
-  align-items: right;
   list-style: none;
-  margin-top: 0.5em;
 }
 
 .navbut li {
@@ -83,21 +76,191 @@ header h1 {
   text-decoration: none;
 }
 
-.hero {
-    background-color: black;
-    color:white;
-    opacity:0.75;
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.container2 {
+  background-color:rgb(61, 172, 223);
+  width:100%;
+  height:100%;
+  margin: auto;
+  opacity:0.8;
   padding: 2em 0;
   text-align: center;
 }
 
+.container4 {
+  background-color:rgb(125, 9, 83);
+  width:100%;
+  height:100%;
+  margin: auto;
+  opacity:0.8;
+  padding: 2em 0;
+}
+
+.container3{
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: flex-start; /* align from left */
+  align-items: center;
+  padding-left: 100px; /* shift both boxes to the right slightly */
+  gap: 20px;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact button {
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+.branch-box {
+  width: 250px;
+  height: 300px;
+  background: white;
+  margin: 0 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.branch-box:hover {
+  transform: scale(1.05);
+}
+
+.branch-box img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.branch-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #333;
+}
+
+.arrow-icon {
+  width: 36px;
+  height: 36px;
+  margin: 10px auto;
+  fill: #333;
+  animation: bounceRight 1s infinite;
+}
+
+    @keyframes bounceRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
+
+
+.hero {
+  background-color: black;
+  color:white;
+  opacity:0.75;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.about-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-section img {
+  flex: 1;
+  max-width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
 
 footer {
-  background: #003366;
+  background: #000000;
   color: white;
-  text-align: center;
   padding: 1em 0;
+  font-size:16px;
   margin-top: 2em;
+  display: flex;
+  flex-direction:row;
+}
+
+.divfoot{
+  display:flex;
+}
+
+.contacts{
+  align-items: right;
+}
+.textfoot{
+  display:flex;
+}
+.credits{
+  display: flex;
+  gap:10px;
+}
+.copyright{
+  text-align: center;
 }
 
 /* Responsive Design */
@@ -105,5 +268,15 @@ footer {
   .nav-links {
     flex-direction: column;
     align-items: center;
-  }
+  }}
+
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-section img {
+      width: 100%;
+    }
 }
