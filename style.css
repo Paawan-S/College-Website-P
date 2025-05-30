@@ -1,14 +1,9 @@
 :root {
-      --main-bg: #f5f5f5;
-      --text-color: #333;
-      --primary: #4b0082;
+      --main-bg: #d8d8d8;
+      --text-color: #000000;
+      --counter: #4b0082;
+      --interconf:#9B437BFA;
       --card-bg: #fff;
-    }
-
-    body.dark {
-      --main-bg: #121212;
-      --text-color: #f5f5f5;
-      --card-bg: #1e1e1e;
     }
 
     body {
@@ -19,29 +14,33 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    nav {
+    html{
+      scroll-behavior: smooth;
+    }
+
+body.darkmode{
+  --main-bg: #0a0023;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+}
+nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #2b3467;
   backdrop-filter: blur(10px);
   padding: 22px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, #2b3467,#A73AA4E8);
+  background: linear-gradient(to bottom,#070046,#9B437BFA);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 #i2{
-    margin-left:38px;
-    width:80px;
-    height:30px;
+  margin-left:38px;
+  width:80px;
+  height:30px;
 }
-
-    body.dark nav {
-      background: rgba(18, 18, 18, 0.9);
-    }
 
     .logo-area {
       display: flex;
@@ -65,22 +64,38 @@
       color: var(--text-color);
     }
 
-    .navbuttons{
-    padding:5px 15px;
-    justify-content: right;
-    border-radius:10px;
-    color: white;
-    background-color: transparent;
-    transition: transform 0.2s ease-in-out;
+.navbuttons{
+  border: 0px;
+  padding:10px 25px;
+  justify-content: right;
+  color: white;
+  font-size: 18px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+}
+#mode svg{
+  fill: var(--primary-color);
+}
+#mode svg:last-child{
+  display: none;
+}
+.darkmode #mode svg:first-child{
+  display: none;
+}
+.darkmode #mode svg:last-child{
+  display: block;
 }
 .navbuttons:hover{
-    background-color:skyblue;
-    transition:0.4s;
-    transform:scale(1.07);
+  color:black;
+  background-color: white;
+  border-radius: 20px;
+  transition:0.4s;
+  transform:scale(1.1);
 }
 
 .navbut {
-  padding-left: 50vw;
+  padding-left: 40vw;
   display: flex;
   align-items: right;
   list-style: none;
@@ -120,7 +135,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       z-index: 0;
     }
 
@@ -134,7 +149,8 @@
     }
 
     .container2 {
-  background-color:rgb(61, 172, 223);
+  background-color:rgb(46, 62, 93);
+  color: white;
   width:100%;
   height:100%;
   margin: auto;
@@ -163,7 +179,7 @@
     .branch-box {
       width: 250px;
       height: 300px;
-      background: white;
+      background: var(--main-bg);
       margin: 0 15px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -187,7 +203,7 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 0;
-      color: #333;
+      color: var(--text-color);
     }
 
     .arrow-icon {
@@ -264,7 +280,7 @@
     }
 
     .counter-section {
-      background: var(--primary);
+      background: var(--counter);
       color: white;
       text-align: center;
       padding: 40px 20px;
@@ -273,6 +289,15 @@
       flex-wrap: wrap;
     }
 
+    .interconf-section {
+      background: var(--interconf);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
     .counter {
       font-size: 2.5rem;
       font-weight: bold;
@@ -311,20 +336,26 @@
     .contact button {
       padding: 12px;
       border: none;
-      background: var(--primary);
+      background: var(--counter);
       color: white;
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
     }
 
-    footer {
-      background: #4b0082;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+footer {
+  background: #000000;
+  color: white;
+  padding: 1em 0;
+  font-size:16px;
+  margin-top: 2em;
+  display: flex;
+  flex-direction:row;
+}
+
+.divfoot{
+  display:flex;
+}
 
     @media (max-width: 768px) {
       .about-section {
