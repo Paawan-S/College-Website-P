@@ -372,7 +372,7 @@ footer {
   position: fixed;
   top: 40%;
   right: 0;
-  background-color: #ca1212; /* choose your color */
+  background-color: #ca1212; 
   color: #fff;
   writing-mode: vertical-rl;
   text-align: center;
@@ -383,7 +383,7 @@ footer {
   z-index: 1000;
   cursor: pointer;
   transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* optional shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .admission-bar a {
@@ -392,7 +392,7 @@ footer {
 }
 
 .admission-bar:hover {
-  background-color: #c21818; /* darker on hover */
+  background-color: #c21818; 
 }
 
 
