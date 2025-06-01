@@ -169,20 +169,10 @@ nav {
 .separator {
   width: 60px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--text-color);
   margin: 15px auto;
   border-radius: 2px;
 }
-
-.separator2 {
-  width: 60px;
-  height: 3px;
-  background-color: #0a0707;
-  margin: 15px auto;
-  border-radius: 2px;
-}
-
-
 
 #description{
   display: flex;
@@ -192,11 +182,18 @@ nav {
 }
 
 .container21-text{
+  margin:5em 5em;
   text-align: center;
+  fill: var(--text-color);
 }
 
 .container21{
   margin-left: 20%;
+}
+
+#img360{
+  margin:10em 1em;
+  fill: var(--text-color);
 }
 .container20 {
   background-color: var(--main-bg);
@@ -222,7 +219,7 @@ nav {
 
 .why-lnct .subtitle {
   font-size: 1.2rem;
-  color: #070707;
+  color: var(--text-color);
   margin-bottom: 40px;
 }
 
@@ -250,10 +247,16 @@ nav {
     background-color: var(--main-bg);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  .advantage-box:hover{
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--main-bg);
+    transition: 0.6s;
   }
 
 
@@ -288,6 +291,10 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+}
+.placement-photos :hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .placement-photos img {
@@ -337,7 +344,8 @@ nav {
     }
 
     .branch-box:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      transition: 0.5s;
     }
 
     .branch-box img {
@@ -357,7 +365,7 @@ nav {
       width: 36px;
       height: 36px;
       margin: 10px auto;
-      fill: #333;
+      fill: var(--text-color);
       animation: bounceRight 1s infinite;
     }
 
@@ -444,6 +452,18 @@ nav {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+    }
+
+    .interconfbut{
+      background-color: white;
+      border-radius: 20px;
+      padding:10px 25px;
+      border:0px;
+      font-size: 18px;
+    }
+    .interconfbut:hover{
+      transform: scale(1.1);
+      transition: 0.4s;
     }
     .counter {
       font-size: 2.5rem;
@@ -588,13 +608,13 @@ footer {
 /* Section heading */
 .gallery-title {
   font-size: 2rem;
-  color: #6A1B9A; /* Purple */
+  color: var(--text-color); /* Purple */
   margin-bottom: 10px;
 }
 
 .gallery-subtitle {
   font-size: 1.2rem;
-  color: #8E24AA; /* Lighter purple */
+  color: var(--text-color);/* Lighter purple */
   margin-bottom: 30px;
 }
 
