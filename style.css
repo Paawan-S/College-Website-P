@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}:root {
+:root {
       --main-bg: #d8d8d8;
       --text-color: #000000;
       --counter: #4b0082;
@@ -23,8 +19,8 @@
     }
 
 body.darkmode{
-  --main-bg: #0a0023;
-  --text-color: #f5f5f5;
+  --main-bg: #0c002a;
+  --text-color: #fffcfc;
   --card-bg: #1e1e1e;
 }
 nav {
@@ -32,12 +28,15 @@ nav {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  padding: 22px 50px;
+  padding: 22px;
+  padding-left: 50px;
+  padding-right: 0%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to bottom,#070046,#9B437BFA);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  gap:5vw;
 }
 
 #i2{
@@ -73,10 +72,11 @@ nav {
   padding:10px 25px;
   justify-content: right;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background-color: inherit;
   transition: transform 0.2s ease-in-out;
   display: flex;
+  box-sizing: border-box;
 }
 #mode svg{
   fill: var(--primary-color);
@@ -99,15 +99,19 @@ nav {
 }
 
 .navbut {
-  padding-left: 40vw;
+  width:95%;
   display: flex;
   align-items: right;
   list-style: none;
   margin-top: 0.5em;
+  margin-left: 50px;
+  margin-right: 0%;
+  justify-content:right;
+  box-sizing: border-box;
 }
 
 .navbut li {
-  margin: 0 15px;
+  margin: 0 5px;
 }
 .navbut a {
   color: #fff;
@@ -122,287 +126,23 @@ nav {
       cursor: pointer;
       border-radius: 6px;
     }
-
-    .hero {
-      background: url('https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg') center/cover no-repeat;
-      height: 85vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 0;
-    }
-
-    .hero-content {
-      z-index: 1;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-    }
-
-    .container2 {
-  background-color:rgb(46, 62, 93);
-  color: white;
-  width:100%;
-  height:100%;
-  margin: auto;
-  opacity:0.8;
-  padding: 2em 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.slider-container {
-      overflow: hidden;
-      width: 100%;
-      padding: 50px 0;
-      position: relative;
-    }
-
-    .slider-track {
-      display: flex;
-      width: max-content;
-      animation: slide 30s linear infinite;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .branch-box {
-      width: 250px;
-      height: 300px;
-      background: var(--main-bg);
-      margin: 0 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      flex-shrink: 0;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .branch-box:hover {
-      transform: scale(1.05);
-    }
-
-    .branch-box img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-    }
-
-    .branch-name {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 0;
-      color: var(--text-color);
-    }
-
-    .arrow-icon {
-      width: 36px;
-      height: 36px;
-      margin: 10px auto;
-      fill: #333;
-      animation: bounceRight 1s infinite;
-    }
-
-    @keyframes bounceRight {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(6px); }
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 60px 0 20px;
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .branch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px 60px;
-    }
-
-    .branch-card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .branch-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .branch-card img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-
-    .branch-card h3 {
-      padding: 12px;
-    }
-
-    .about-section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .about-section img {
-      flex: 1;
-      max-width: 45%;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    }
-
-    .about-text {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .counter-section {
-      background: var(--counter);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    .interconf-section {
-      background: var(--interconf);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    .counter {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-
-    .label {
-      font-size: 1rem;
-    }
-
-    .contact {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
-
-    .contact h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .contact input, .contact textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .contact button {
-      padding: 12px;
-      border: none;
-      background: var(--counter);
-      color: white;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-footer {
-  background: #000000;
-  color: white;
-  padding: 1em 0;
-  font-size:16px;
-  margin-top: 2em;
-  display: flex;
-  flex-direction:row;
-}
-
-.divfoot{
-  display:flex;
-}
-
-    @media (max-width: 768px) {
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-section img {
-        width: 100%;
-      }
-    }
-
-.admission-bar {
-  position: fixed;
-  top: 40%;
-  right: 0;
-  background-color: #ca1212; 
-  color: #fff;
-  writing-mode: vertical-rl;
+.events-head{
+  font-size: 26px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
   text-align: center;
-  padding: 10px 5px;
-  font-weight: bold;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  z-index: 1000;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-}
-
-.admission-bar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.admission-bar:hover {
-  background-color: #c21818; 
+  
 }
 .events {
   width: 100%;
-  height: 1270px;
+  height: 600px;
   padding: 1.2em 0 0 0;
-  background-color: rgb(75, 75, 102);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -444,9 +184,9 @@ footer {
 }
 
 img {
-  width: 450px;
-  height: auto;
-  margin-right: 30px;
+  width: 200px;
+  height:100%;
+  margin-right: 20px;
   display: block;
   flex-shrink: 0;
   transition: transform 0.3s ease;
@@ -454,28 +194,52 @@ img {
 img:hover {
   transform: scale(1.1);
 }
-
-.line-1{
-    height: 2px ;
-    background-color: black;
-}
-.slide-text {
+footer {
+  height:100%;
   width:100%;
-  font-size: 26px;
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
-  overflow: hidden;
+  background: black;
+  color: white;
+  font-size:16px;
+  margin-top: 2em;
 }
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.phone,.mail, .location{
+  width:18px;
+  height: 18px;
+  fill: white;
 }
-.events-head{
-  font-size: 50px;
-  height: 100px;
-  background: linear-gradient(rgb(172, 14, 172),rgb(18, 18, 167));
+.social{
+  width: 45px;
+  height: 45px;
+  fill: white;
+}
+
+.contacts{
+  justify-self: right;
+}
+
+.info{
+  width:90%;
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+.icons{
+  display:flex;
+  width:10rem;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.divfoot{
+  display:flex;
+}
+#copyright{
   text-align: center;
-  text-shadow: 5px 2px 2px green;
-  
+}
+#i1{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#textfoot{
+  margin:15px;
 }
