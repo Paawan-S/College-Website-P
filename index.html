@@ -1,459 +1,667 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="https://lnct.ac.in/wp-content/uploads/2021/05/cropped-android-chrome-512x512-1-32x32.png">
-  <title>LNCT Group | Best Educational Professional Group in Central India</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="working.js" defer></script>
-</head>
-<body>
+:root {
+      --main-bg: #d8d8d8;
+      --text-color: #000000;
+      --counter: #4b0082;
+      --interconf:#9B437BFA;
+      --card-bg: #fff;
+    }
 
-  <!--Navigation Bar Codes -->
-  <nav>
-    <div class="logo-area">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png" alt="LNCT Logo">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px; width: auto;">
-    </div>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--main-bg);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+body.darkmode{
+  --main-bg: #0c002a;
+  --text-color: #fffcfc;
+  --card-bg: #1e1e1e;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  padding-left: 50px;
+  padding-right: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  /* width:100vw; */
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom,#070046,#9B437BFA);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  gap:5vw;
+  overflow-x: hidden;
+}
+
+#hamburgermenu{
+  display:none;
+  fill: white;
+  width: 5vw;
+  margin-right:10vw;
+}
+#i2{
+  margin-left:38px;
+  width:80px;
+  height:30px;
+}
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-area img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+.navbuttons{
+  border: 0px;
+  padding:10px 10px;
+  justify-content: right;
+  color: white;
+  font-size: 16px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  /* display: flex; */
+  box-sizing: border-box;
+}
+#mode svg{
+  fill: var(--primary-color);
+}
+#mode svg:last-child{
+  display: none;
+}
+.darkmode #mode svg:first-child{
+  display: none;
+}
+.darkmode #mode svg:last-child{
+  display: block;
+}
+.navbuttons:hover{
+  color:black;
+  background-color: white;
+  border-radius: 20px;
+  transition:0.4s;
+  transform:scale(1.1);
+}
+
+.navbut {
+  /* width:75vw; */
+  display: flex;
+  align-items: right;
+  list-style: none;
+  margin-top: 0.5em;
+  margin-left: 25px;
+  margin-right: 0%;
+  justify-content:left;
+  box-sizing: border-box;
+}
+
+.navbut li {
+  margin: 0 5px;
+}
+.navbut a {
+  color: #fff;
+  text-decoration: none;
+}
+
+    .toggle-dark {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .hero {
+      background: url('https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg') center/cover no-repeat;
+      height: 85vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .hero-content {
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .container2 {
+  background-color: #200474;
+  color: white;
+  width:100%;
+  height:100%;
+  margin: auto;
+  opacity:0.8;
+  padding: 2em 0;
+}
+
+.separator {
+  width: 60px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+#description{
+  display: flex;
+}
+#container22{
+  width: 30%;
+}
+
+.container21-text{
+  margin:5em 5em;
+  text-align: center;
+  fill: var(--text-color);
+}
+
+.container21{
+  margin-left: 20%;
+}
+
+#img360{
+  margin:10em 1em;
+  fill: var(--text-color);
+}
+.container20 {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  width:65%;
+  height:100%;
+  font-size: 1em;
+  opacity:0.7;
+  padding: 2em 2em;
+}
+
+.why-lnct {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-lnct h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.why-lnct .subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.container10 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 
-    <div class="navbut">
-      <li><a href="#top"><button class="navbuttons" href="about.html">Home</button></a></li>
-      <li><a href="#about"><button class="navbuttons" href="about.html">About</button></a></li>
-      <li><a href="#contact"><button class="navbuttons" href="#contact">Contact</button></a></li>
-      <li><a href=""><button class="navbuttons">Academics</button></a></li>
-      <li><a href="#placements"><button class="navbuttons">Placements</button></a></li>
-      <li><a href="https://paawan-s.github.io/College-Event/" target="_blank"><button class="navbuttons" href="events.html">Events</button></li></a>
-      <li><button class="navbuttons" id="mode" href="">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"></path></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"></path></svg>
-      </button></li>
-    </div>
-  </nav>
+.advantages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
 
-  <!--Welcome Box Codes-->
-  <section class="hero" id="top">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Welcome to LNCT Group of Colleges</h1>
-      <h3>Empowering Future Leaders Through Education</h3>
-    </div>
-  </section>
-  <br>
+  .advantage-box {
+    background-color: var(--main-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .advantage-box:hover{
+    transform: scale(1.1);
+    background-color: var(--text-color);
+    color: var(--main-bg);
+    transition: 0.6s;
+  }
 
-  <!--College Box Codes-->
-      <center><h1>Best Educational Group in Central India</h1></center>
-     <div class="separator"></div>
-  <div id="description">
-    <div id="container22">
-      <br><br><br><br><br><br>
-      <div class="container21" onclick="window.location.href='https://tour.lnct.ac.in/LNCT/';">
-        <img id="img360" src="https://lnct.ac.in/wp-content/uploads/2023/05/360-Virtual-Tour-Logo-300x200.png"></img>
-      </div>
-    </div>
-    
-    
-    <div class="container20">
-     <b><h3><center>LNCT Group of Colleges is The Best Educational Professional Group in Central India
-      LNCT Synonymous with excellence in higher education with 32+ Years of Academic Excellence & Discipline.</h3></b></center>
-     <b><h4>Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification & NBA accreditation for many Engineering courses.. 
-      Bright young students from all across the country are coming to fulfill their dream in this group.
-     </h4></b>
-     
-     <b><p>
-      Born in semi urban city of Bilaspur (C.G.),Shri Jai Narayan Chouksey, completed his post graduation from Robertson College, Jabalpur. 
-      He established Lakshmi Narain College of Technology (LNCT), Bhopal in 1994 under the banner of H.K. Kalchuri Education Trust. 
-      Since then, With the commitment of “Working Towards Being the Best”, LNCT Group has achieved many milestones. 
-      The institute is successfully meeting the objective of producing skilled manpower of the highest quality able to cope up with the challenges of ever evolving industrial needs of our country.
-      The Alumni of LNCT Group are working all across the Globe in Big Multi National Companies.
-     </p></b>
 
-     <b><p>The LNCT Campus at Bhopal is spread over a lush green environment of 50 acres (approx.). 
-      Our Campus constitutes of many buildings that house academics & research centers. 
-      In addition to this, The academic building has tutorial rooms, lecture halls, computer and electronics labs, offices of the administrations as well as The faculty rooms. 
-      The campus is fully equipped with facilities like Wi-Fi,central library (digital library, Internet lab), digital classrooms, 
-      hostel, mess,Central workshop, Auditorium,Sports Ground etc.</p></b>
-    </div>
-  </div>
+  .advantage-box p {
+    margin: 0;
+    line-height: 1.4;
+  }
 
-  <!--College Branches Codes-->
 
-  <div class="container2">
-    <center><h1>Our Institutes & Branches</h1></center>
-    <div class="separator"></div>
-    <center><b><h4>We are imparting quality education in the disciplines of Engineering, Pharmacy, Management and Advanced Computer Studies</h4></b></center>
-    <div class="slider-container">
-  <div class="slider-track">
-    
-    <div class="branch-box" onclick="window.location.href='https://lnct.ac.in';">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg" alt="Branch">
-      <div class="branch-name">LNCT</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-    <div class="branch-box" onclick="window.location.href='https://lncts.in';">
-      <img src="https://images.shiksha.com/mediadata/images/1541656669phpZ7N9Og_g.jpg" alt="Branch">
-      <div class="branch-name">LNCT&S</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+.placement-section {
+  background-color: purple;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    <div class="branch-box" onclick="window.location.href='https://lncte.in';">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-10-768x351.jpg" alt="Branch">
-      <div class="branch-name">LNCT&E</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+.placement-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-    <div class="branch-box" onclick="window.location.href='https://lncps.in';">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnQWrNZcYlasU--yRjkVIxMOLwMaYAynyew&s" alt="Branch">
-      <div class="branch-name">LNCP</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+.placement-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+.placement-photos :hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 
-    <div class="branch-box" onclick="window.location.href='https://lnct.ac.in/lnct-bpl-indore-campus';">
-      <img src="https://www.lnctindore.com/_next/image?url=%2Fbuilding2.png&w=1920&q=75" alt="Branch">
-      <div class="branch-name">LNCT Indore</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+.placement-photos img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }}
    
-    <div class="branch-box" onclick="window.location.href='https://jnctbhopal.ac.in';">
-      <img src="https://images.shiksha.com/mediadata/images/1491288936phpqGhLRd.jpeg" alt="Branch">
-      <div class="branch-name">JNCT Bhopal</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+.slider-container {
+      overflow: hidden;
+      width: 100%;
+      padding: 50px 0;
+      position: relative;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctu.ac.in';">
-      <img src="https://lnctu.ac.in/wp-content/uploads/2024/09/LNCT-A-scaled-1-1024x528.jpg" alt="Branch">
-      <div class="branch-name">LNCT University</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .slider-track {
+      padding-left:250px;
+      display: flex;
+      width: max-content;
+      animation: slide 80s linear infinite;
+      transition: transform 5s linear;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctworldschools.com';">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYuzyrlnxbjVC7Eab5FO9t91YZ3EE2fqBdUw&s" alt="Branch">
-      <div class="branch-name">LNCT World Of School</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-69%); } 
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctmca.in';">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGXuf949bE3Q4JnwOcqgrmQohQUGJM2o-mtSVV8aMH0bnFg6XB_RkNqWwHH--wUh9v4rI&usqp=CAU" alt="Branch">
-      <div class="branch-name">LNCT MCA</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .branch-box {
+      width: 250px;
+      height: 300px;
+      background: var(--main-bg);
+      margin: 0 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctvu.ac.in/';">
-      <img src="https://image-static.collegedunia.com/public/college_data/images/appImage/1655126587Screenshot20220613185201.png?h=260&w=360&mode=crop" alt="Branch">
-      <div class="branch-name">LNCT Vidhyapeeth University</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .branch-box:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctuj.com/';">
-      <img src="https://content.jdmagicbox.com/comp/jabalpur/f2/9999px761.x761.170522122926.j6f2/catalogue/lakshmi-narain-college-of-technology-lnct-jabalpur-bheraghat-jabalpur-colleges-hg4jqrk.jpg" alt="Branch">
-      <div class="branch-name">LNCT Jabalpur</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .branch-box img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://www.jnctpu.edu.in/college-of-nursing/';">
-      <img src="https://www.jnctpu.edu.in/wp-content/uploads/2024/06/SliderNursing.jpg" alt="Branch">
-      <div class="branch-name">JNCN</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .branch-name {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 0;
+      color: var(--text-color);
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://indorelnmc.com/';">
-      <img src="https://indorelnmc.com/wp-content/uploads/2022/06/Savakhuj.jpg" alt="Branch">
-      <div class="branch-name">Indore LNMC Sewakunj Hospital</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .arrow-icon {
+      width: 36px;
+      height: 36px;
+      margin: 10px auto;
+      fill: var(--text-color);
+      animation: bounceRight 1s infinite;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://lnctu.ac.in/lnac/';">
-      <img src="https://www.lnayurvedcollege.com/main.jpeg" alt="Branch">
-      <div class="branch-name">LN Ayurved College & Hospital</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    @keyframes bounceRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://cecbilaspur.ac.in/';">
-      <img src="https://www.sikshapedia.com/public/data/colleges/chouksey-engineering-college-bilaspur-chhattisgarh/CJuIOifHzA.webp" alt="Branch">
-      <div class="branch-name">CEC Bilaspur</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .section-title {
+      text-align: center;
+      margin: 60px 0 20px;
+      font-size: 28px;
+      font-weight: 600;
+    }
 
-    <div class="branch-box" onclick="window.location.href='https://www.lnctrishiraj.ac.in/';">
-      <img src="https://www.lnctrishiraj.ac.in/wp-content/uploads/2022/01/Rcds-2-1536x864.jpg" alt="Branch">
-      <div class="branch-name">Rishiraj College of Dental Science</div>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 5l7 7-7 7" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 60px;
+    }
 
+    .branch-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .branch-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .branch-card h3 {
+      padding: 12px;
+    }
+
+    .about-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .about-section img {
+      flex: 1;
+      max-width: 45%;
+      border-radius: 12px;
+      align-self: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .counter-section {
+      background: var(--counter);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .interconf-section {
+      background: var(--interconf);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .interconfbut{
+      background-color: white;
+      border-radius: 20px;
+      padding:10px 25px;
+      border:0px;
+      font-size: 18px;
+    }
+    .interconfbut:hover{
+      transform: scale(1.1);
+      transition: 0.4s;
+    }
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 1rem;
+    }
+
+    .contact {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact button {
+      padding: 12px;
+      border: none;
+      background: var(--counter);
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+footer {
+  height:100%;
+  width:100%;
+  background: black;
+  color: white;
+  font-size:16px;
+  margin-top: 2em;
+}
+.phone,.mail, .location{
+  width:18px;
+  height: 18px;
+  fill: white;
+}
+.social{
+  width: 45px;
+  height: 45px;
+  fill: white;
+}
+
+.contacts{
+  justify-self: right;
+}
+
+.info{
+  width:90%;
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+.icons{
+  display:flex;
+  width:10rem;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.divfoot{
+  display:flex;
+}
+#copyright{
+  text-align: center;
+}
+#i1{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#textfoot{
+  margin:15px;
+}
     
-  </div>
-</div>
-  </div>
+.admission-bar {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  background-color: #ca1212; 
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
 
+.admission-bar a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  <!--About Section Codes-->
+.admission-bar:hover {
+  background-color: #c21818; 
+}
 
-  <section class="about-section" id="about">
-    <img src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-slider2-1024x456.jpg" alt="About" data-aos="fade-right">
-    <div class="about-text" data-aos="fade-left">
-      <h2>About LNCT</h2>
-      <p>LNCT Group of Colleges is a premier institute nurturing talent and shaping the future with innovation and discipline. Our mission is to empower students with knowledge and skills to succeed in life.</p>
-    </div>
-  </section>
+.container50 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-  <!--Counter Section Code-->
+/* Section heading */
+.gallery-title {
+  font-size: 2rem;
+  color: var(--text-color); /* Purple */
+  margin-bottom: 10px;
+}
 
- 
-  <div class="counter-section">
-    <div>
-      <div class="counter" data-target="171">0</div>
-      <div class="label">NIRF All India Rank</div>
-    </div>
-    <div>
-      <div class="counter" data-target="1500">0</div>
-      <div class="label">Offers For 2024 Batch</div>
-    </div>
-    <div>
-      <div class="counter" data-target="500">0</div>
-      <div class="label">Top Recruiters</div>
-    </div>
-    <div>
-      <div class="counter" data-target="190">0</div>
-      <div class="label">Patent Publications</div>
-    </div>
-    <div>
-      <div class="counter" data-target="9500">0</div>
-      <div class="label">Total Offers in last 5 Years</div>
-    </div>
-  </div>
+.gallery-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);/* Lighter purple */
+  margin-bottom: 30px;
+}
 
-  <section class="why-lnct">
-  <h2>The LNCT Factor</h2>
-  <div class="separator"></div>
-  <p class="subtitle">Synonymous With Excellence in Higher Education</p>
-  <b><p>LNCT Group is the most preferred choice of the IIT JEE/MAT/Pre-MCA scholars, 
-    seeking admission through counseling conducted by the State Universities.</p></b>
-  <div class="container10">
-    <div class="advantages-container">
-  <div class="advantage-box">
-    <p>LNCT Group of Colleges have Best Infrastructure with State-of-the-Art laboratories, Latest Machines and Smart Classrooms with A/V facility.</p>
-  </div>
-  <div class="advantage-box">
-    <p>Best Engineering Colleges with 32+ Years of Academic Excellence and Discipline. Highest Chancellor’s Awards and Highest Placements in Central India.</p>
-  </div>
-  <div class="advantage-box">
-    <p>Unbeatable Record Placement of Central India with 1800+ Offers by 40 Companies. Closed Campus only for LNCT Group of Colleges.</p>
-  </div>
-  <div class="advantage-box">
-    <p>Other than Best Academics and Placements, Providing Best Sports facilities also. Producing National & International Players in various games.</p>
-  </div>
-  <div class="advantage-box">
-    <p>Best Engineering Institutions with NBA Accreditation & 188+ Ph.D Faculties for Academic Excellence. 191+ Patents filed and published in last 3 years leads to Best Research Environment.</p>
-  </div>
-  <div class="advantage-box">
-    <p>Lush Green Campus having Boys & Girls Hostels with 24 hours Security, Dispensary, Bank ATMs, GYM, Indoor and Outdoor Fields makes it a BEST Infrastructure campus.</p>
-  </div>
-</div>
-  </div>
-</section>
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-<section class="placement-section" id="placements">
-    <b><h1>Placements in LNCT Group</h1></b>
-    <div class="separator"></div>
-    <br>
-    <div class="placement-photos">
-      <img src="https://lnct.ac.in/wp-content/uploads/2025/04/1-1.jpg" alt="Placement 1" />
-      <img src="https://lnct.ac.in/wp-content/uploads/2025/04/2-1.jpg" alt="Placement 2" />
-      <img src="https://lnct.ac.in/wp-content/uploads/2025/04/3-1.jpg" alt="Placement 3" />
-      <img src="https://lnct.ac.in/wp-content/uploads/2025/04/3-1.jpg" alt="Placement 4" />
-      <img src="https://lnct.ac.in/wp-content/uploads/2025/04/5.jpg" alt="Placement 5" /> 
-    </div>
-  </section>
+/* Individual gallery item */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-  <section id="lnct-gallery" class="gallery-section">
-  <div class="container50">
-    <h2 class="gallery-title">LNCT Gallery</h2>
-    <div class="separator"></div>
-    <p class="gallery-subtitle">
-      Experience the extraordinary, embrace life at LNCT Group of Colleges!
-    </p>
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
 
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2024/10/LNCT-Garba-Day-1-31.jpeg" alt="Event 1">
-      </div>
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2024/10/LNCT-Garba-Day-3-50.jpeg" alt="Event 2">
-      </div>
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2023/05/LifeatLNCT-9.jpg" alt="Event 3">
-      </div>
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2024/10/LNCT-Garba-Day-2-9.jpeg" alt="Event 4">
-      </div>
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2024/10/LNCTU-28.jpeg" alt="Event 5">
-      </div>
-      <div class="gallery-item">
-        <img src="https://lnct.ac.in/wp-content/uploads/2024/10/LNCTU-8.jpeg" alt="Event 6">
-      </div>
-      <div class="gallery-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5p-lN48Jsa3j_ypceQ1qUAS7C-1SluVhheCjii1JFjDKvElxtc0e0c8mK-7FsGwYqxn0&usqp=CAU" alt="Event 7">
-      </div>
-      <div class="gallery-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOiVunTSdxHVbcT1n8LoWAos_GyABdxu54UQ&s" alt="Event 8">
-      </div>
-      <div class="gallery-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPPVnR7HJaO9rHPxP3s3btypf1FjXTlLcMJQ&s" alt="Event 9">
-      </div>
-      <div class="gallery-item">
-        <img src="https://itdcindia.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-14-at-2.01.55-PM.jpeg" alt="Event 10">
-      </div>
-      <div class="gallery-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlwL2L2-NUVDRqcaXb4VsBEq37I12H01ZYZA&s" alt="Event 11">
-      </div>
-      <div class="gallery-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk9y88bdLleeK7goXRIQrngYiELPTNcG16Vw&s" alt="Event 12">
-      </div>
-      </div>
-    </div>
-  </div>
+.gallery-item:hover {
+  transform: scale(1.05);
+}
 
-    <div class="interconf-section">
-    <div>
-      <div class="interconf">INTERNATIONAL CONFERENCE</div>
-    </div>
-    <div>
-      <div class="interconf">IEEE International Conference on Engineering
-Innovations and Technologies (ICoEIT)</div>
-    </div>
-    <a href="https://www.icoeit.org/"><button class="interconfbut" href="about.html">Official Website</button></a>
-    <!-- <div class="interconf" onclick="window.location.href='https://www.icoeit.org/';">Official Website</div> -->
-  </div>
-
-    <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="footer">
-      <div id = "divfoot">
-        <div id="footlogo"><img id="i1" src="https://lnct.ac.in/wp-content/uploads/2021/04/lnct-logo-footer-300x106-1.png"></div>
-        <div class="contacts">
-          <div class="info">
-           <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-            <p> Reception : 0755-6185300,0755-6185300/1/2/3/4/5</p>
-          </div>
-          <div class="info">
-            <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-            <p> Admission Cell : 7440777111, 7201800001, 0755-6185350, 0755-6685400</p>
-          </div>
-          <div class="info">
-            <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-            <p> Training & Placement Cell : 9826062730, 0755-6185341</p>
-          </div>
-          <div class="info">
-            <svg  class="mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-            <p> Email Id:info@lnct.ac.in, admission@lnct.ac.in, Jobs@lnct.ac.in</p>
-          </div>
-          <div class="info">
-            <svg  class="location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-            <p> LNCT Campus, Kalchuri Nagar, (P.O. Kolua) Raisen Road, Bhopal-462022 (M.P).</p>
-          </div>
-
-        </div>
-        <div class="icons">
-          <a href="https://www.instagram.com/lnctgroupofcolleges">
-            <svg  class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/c/LnctBroadcastingChannel">
-            <svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
-          </a>
-          <a href=https://www.facebook.com/LNCTGroupOfCollege>
-            <svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div id ="textfoot">
-        <div class="credits">
-          <p>Made by - Team GUI</p>
-          <li>Paawan Singhai</li>
-          <li>Utkrishta Singoria</li>
-          <li>Harshit Ringe</li>
-        </div> 
-      </div>
-      <div id="copyright"><p>&copy; 2025 LNCT. All rights reserved.</p></div>  
-     
-    </div>
-  </footer>
-
- 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-  
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-      counter.innerText = '0';
-      const update = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
-        const increment = target / 100;
-
-        if (current < target) {
-          counter.innerText = `${Math.ceil(current + increment)}`;
-          setTimeout(update, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      update();
-    });
-
-  </script>
-
-<div class="admission-bar">
-  <a href="https://admissions.lnct.ac.in/">Admission Open</a>
-</div>
-
-</body>
-</html>
+@media (max-width: 576px) {
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  #hamburgermenu{
+    display: block;
+    list-style: none;
+    &::marker{display: none;};
+  }
+  .navbut{
+    display: none;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section img {
+    width: 100%;
+  }
+}
