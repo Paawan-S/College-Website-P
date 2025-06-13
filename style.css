@@ -178,7 +178,7 @@ nav {
   display: flex;
 }
 #container22{
-  width: 30%;
+  width: 22%;
 }
 
 .container21-text{
@@ -188,11 +188,11 @@ nav {
 }
 
 .container21{
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 #img360{
-  margin:10em 1em;
+  margin:3em 1em;
   fill: var(--text-color);
 }
 .container20 {
@@ -510,7 +510,54 @@ nav {
       cursor: pointer;
     }
 
-footer {
+    .quick-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  text-align: right;
+}
+
+.quick-contact button {
+  background-color: #6c1333;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.quick-contact button:hover {
+  background-color: #8c1f45;
+}
+
+.contact-options {
+  display: none;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.contact-options a {
+  display: block;
+  color: #6c1333;
+  text-decoration: none;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.contact-options a:hover {
+  text-decoration: underline;
+}
+
+
+
+ footer{
   height:100%;
   width:100%;
   background: black;
