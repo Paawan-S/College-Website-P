@@ -143,6 +143,33 @@
   text-decoration: underline;
 }
 
+.admission-bar {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  background-color: #ca1212; 
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.admission-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.admission-bar:hover {
+  background-color: #c21818; 
+}
+
 
     footer{
   height:100%;
@@ -309,6 +336,10 @@
   </div>
 </div>
 
+<div class="admission-bar">
+  <a href="https://admissions.lnct.ac.in/">Admission Open</a>
+</div>
+
 
   <!-- FOOTER -->
   <footer>
@@ -384,3 +415,5 @@
 
 </body>
 </html>
+
+
