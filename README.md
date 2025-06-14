@@ -1,4 +1,5 @@
 INDEX.HTML 
+
 🔹 <head> Section
 Purpose: Contains metadata and links to stylesheets and scripts.
 
