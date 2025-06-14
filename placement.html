@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --text-color: #000;
-      --card-bg: #ffffff;
-      --highlight: #4b0082;
+      --highlight: #fffb00;
+      --bg: #0c002a;
+      --text: white;
+      --card-bg: #323232;
+      --shadow: rgba(0, 0, 0, 0.1);
     }
 
     * {
@@ -23,11 +25,11 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: url('https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20.jpg') no-repeat center center fixed;
-      background-size: cover;
-
       color: var(--text-color);
       position: relative;
+    }
+    p{
+      color:var(--text);
     }
 
     /* Overlay to reduce image opacity */
@@ -35,23 +37,24 @@
       content: "";
       position: fixed;
       inset: 0;
-      background-color: rgba(255,255,255,0.7);
+      background-color: var(--bg);
       z-index: -1;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      padding: 22px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(to bottom, #070046, #9B437BFA);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 22px;
+  padding-right: 0;
+  width:98vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom,#070046,#9B437BFA);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
 
     .logo-area {
       display: flex;
@@ -63,20 +66,77 @@
       height: 50px;
     }
 
-    .navbut {
-      display: flex;
-      list-style: none;
-      gap: 10px;
-    }
+.navbuttons{
+  border: 0px;
+  padding:15px 15px;
+  justify-content: right;
+  color: white;
+  font-size: 16px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  box-sizing: border-box;
+}
+.navbuttons-small{
+  border: 0px;
+  padding:15px 15px;
+  justify-content: right;
+  color: white;
+  font-size: 16px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  display: none;
+  box-sizing: border-box;
+}.navbuttons:hover {
+  color:black;
+  background-color: white;
+  border-radius: 25px;
+  transition:0.4s;
+  transform:scale(1.1);
+}
+.navbuttons-small:hover{
+  color:black;
+  background-color: white;
+  border-radius: 25px;
+  transition:0.4s;
+  transform:scale(1.1);
+}
 
-    .navbuttons {
-      border: none;
-      padding: 10px 25px;
-      color: white;
-      font-size: 16px;
-      background-color: transparent;
-      cursor: pointer;
-    }
+.navbut {
+  width:100vw;
+  padding-right: 3vw;
+  display: flex;
+  list-style: none;
+  justify-content:right;
+  box-sizing: border-box;
+}
+
+.navbut li {
+  margin: 0 5px;
+}
+.navbut a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-content{
+  display: none;
+}
+#hamburger{
+  display: none;
+  width:25px;
+  height: 25px;
+  background-color: transparent;
+  fill:white;
+  align-self: right;
+}
+#input{
+  display:none;
+}
+
+#input:checked ~.dropdown-content-small .navbuttons-small{
+  display: block;
+}
 
     main {
       padding: 130px 20px 40px;
@@ -139,7 +199,7 @@
       margin-bottom: 10px;
     }
 
-    footer {
+footer{
   height:100%;
   width:100%;
   background: black;
@@ -148,13 +208,15 @@
   margin-top: 2em;
 }
 .phone,.mail, .location{
+  margin-left: 8px;
+  margin-right: 8px;;
   width:18px;
   height: 18px;
   fill: white;
 }
 .social{
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   fill: white;
 }
 
@@ -181,6 +243,7 @@
 #copyright{
   text-align: center;
 }
+
 #i1{
   margin-left: 15px;
   margin-top: 15px;
@@ -261,6 +324,27 @@
   text-decoration: underline;
 }
 
+@media (max-width: 576px) {
+  html{
+    overflow-x: hidden !important;
+  }
+  .dropbtn{
+    display: block;
+  }
+  .navbut{
+    display:none;
+  }
+  .quick-contact button{
+    margin-right:3vw;
+  }
+  #hamburger{
+    margin-left: 15vw;
+    display: block;
+  }
+  .nav{
+    max-width:100vw;
+  }
+    }
 
   </style>
 </head>
@@ -270,17 +354,40 @@
   <nav>
     <div class="logo-area">
       <img src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png" alt="LNCT Logo">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px;">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px; width: auto;">
     </div>
-    <ul class="navbut">
-      <li><a href="index.html"><button class="navbuttons">Home</button></a></li>
-      <li><a href="#about"><button class="navbuttons">About</button></a></li>
-      <li><a href="contact.html"><button class="navbuttons">Contact</button></a></li>
+    <label  id="hamburger" for="input"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></label>
+    <input  id ="input" type="checkbox">
+    <div class="dropdown-content"> 
+      <a href="#top"><button class="navbuttons" href="about.html">Home</button></a>
+      <a href="#about"><button class="navbuttons" href="about.html">About</button></a>
+      <a href="contact.html"><button class="navbuttons" href="#contact">Contact</button></a>
+      <a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons">Alumni Cell</button></a>
+      <a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons" href="">Campus Tour</button></a>
+      <a href="placement.html"><button class="navbuttons">Placements</button></a>
+      <a href="event.html" ><button class="navbuttons" href="events.html">Events</button></a>
+    </div>
+    </input>
+    <div class="navbut">
+      <li><a href="index.html"><button class="navbuttons" href="about.html">Home</button></a></li>
+      <li><a href="#about"><button class="navbuttons" href="about.html">About</button></a></li>
+      <li><a href="contact.html"><button class="navbuttons" href="#contact">Contact</button></a></li>
       <li><a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons">Alumni Cell</button></a></li>
+      <li><a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons" href="">Campus Tour</button></li></a>
       <li><a href="placement.html"><button class="navbuttons">Placements</button></a></li>
-      <li><a href="event.html" ><button class="navbuttons">Events</button></a></li>
-    </ul>
-  </nav>
+      <li><a href="event.html" ><button class="navbuttons" href="events.html">Events</button></li></a>
+    </div>
+    <div class="dropdown-content-small">
+      <a href="#top"><button class="navbuttons-small" href="about.html">Home</button></a>
+      <a href="#about"><button class="navbuttons-small" href="about.html">About</button></a>
+      <a href="contact.html"><button class="navbuttons-small" href="#contact">Contact</button></a>
+      <a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons-small">Alumni Cell</button></a>
+      <a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons-small" href="">Campus Tour</button></a>
+      <a href="placement.html"><button class="navbuttons-small">Placements</button></a>
+      <a href="event.html" ><button class="navbuttons-small" href="events.html">Events</button></a>
+    </div>
+  </nav> 
+
 
   <!-- Main Content -->
   <main>
