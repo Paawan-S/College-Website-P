@@ -6,43 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --highlight: #1b0de1;
-      --bg: #ffffff;
-      --text: #000;
-      --card-bg: #fff;
+      --highlight: #fffb00;
+      --bg: #000000;
+      --text: #ffffff;
+      --card-bg: #323232;
       --shadow: rgba(0, 0, 0, 0.1);
     }
-
+    p{
+      color:var(--text);
+    }
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: url('https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: var(--text);
+      color: var(--);
+    }
+    a{
+      color:#e570ff
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background-color: rgba(255,255,255,0.7);
+      background-color:var(--bg);
+      opacity: 0.7;
       z-index: -1;
     }
 
-    nav {
+nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
   padding: 22px;
-  padding-left: 50px;
-  padding-right: 0%;
+  padding-right: 0;
+  width:98vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow-x: hidden;
   background: linear-gradient(to bottom,#070046,#9B437BFA);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  gap:5vw;
 }
 
     .logo-area {
@@ -55,24 +60,81 @@
       height: 50px;
     }
 
-    .navbut {
-      display: flex;
-      list-style: none;
-      gap: 10px;
-    }
+.navbuttons{
+  border: 0px;
+  padding:15px 15px;
+  justify-content: right;
+  color: white;
+  font-size: 16px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  box-sizing: border-box;
+}
+.navbuttons-small{
+  border: 0px;
+  padding:15px 15px;
+  justify-content: right;
+  color: white;
+  font-size: 16px;
+  background-color: inherit;
+  transition: transform 0.2s ease-in-out;
+  display: none;
+  box-sizing: border-box;
+}.navbuttons:hover {
+  color:black;
+  background-color: white;
+  border-radius: 25px;
+  transition:0.4s;
+  transform:scale(1.1);
+}
+.navbuttons-small:hover{
+  color:black;
+  background-color: white;
+  border-radius: 25px;
+  transition:0.4s;
+  transform:scale(1.1);
+}
 
-    .navbuttons {
-      border: none;
-      padding: 10px 25px;
-      color: white;
-      font-size: 16px;
-      background-color: transparent;
-      cursor: pointer;
-    }
+.navbut {
+  width:100vw;
+  padding-right: 3vw;
+  display: flex;
+  list-style: none;
+  justify-content:right;
+  box-sizing: border-box;
+}
+
+.navbut li {
+  margin: 0 5px;
+}
+.navbut a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-content{
+  display: none;
+}
+#hamburger{
+  display: none;
+  width:25px;
+  height: 25px;
+  background-color: transparent;
+  fill:white;
+  align-self: right;
+}
+#input{
+  display:none;
+}
+
+#input:checked ~.dropdown-content-small .navbuttons-small{
+  display: block;
+}
 
     h1 {
       text-align: center;
-      color: var(--highlight);
+      color: var(--text);
       margin-top: 130px;
       margin-bottom: 20px;
     }
@@ -90,6 +152,7 @@
       background-color: var(--card-bg);
       padding: 20px;
       border-radius: 12px;
+      opacity:0.9;
       box-shadow: 0 4px 12px var(--shadow);
       line-height: 1.7;
     }
@@ -143,35 +206,7 @@
   text-decoration: underline;
 }
 
-.admission-bar {
-  position: fixed;
-  top: 40%;
-  right: 0;
-  background-color: #ca1212; 
-  color: #fff;
-  writing-mode: vertical-rl;
-  text-align: center;
-  padding: 10px 5px;
-  font-weight: bold;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  z-index: 1000;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-}
-
-.admission-bar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.admission-bar:hover {
-  background-color: #c21818; 
-}
-
-
-    footer{
+footer{
   height:100%;
   width:100%;
   background: black;
@@ -180,13 +215,15 @@
   margin-top: 2em;
 }
 .phone,.mail, .location{
+  margin-left: 8px;
+  margin-right: 8px;;
   width:18px;
   height: 18px;
   fill: white;
 }
 .social{
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   fill: white;
 }
 
@@ -221,25 +258,68 @@
   margin:15px;
 }
 
+@media (max-width: 576px) {
+  html{
+    overflow-x: hidden !important;
+  }
+  .dropbtn{
+    display: block;
+  }
+  .navbut{
+    display:none;
+  }
+  .quick-contact button{
+    margin-right:3vw;
+  }
+  #hamburger{
+    margin-left: 15vw;
+    display: block;
+  }
+  .nav{
+    max-width:100vw;
+  }
+    }
+
   </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
-   <nav>
+<nav>
     <div class="logo-area">
       <img src="https://lnct.ac.in/wp-content/uploads/2021/04/LNCT-Logo.png" alt="LNCT Logo">
-      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px;">
+      <img src="https://lnct.ac.in/wp-content/uploads/2021/04/NBA-LOGO-2.png" alt="NBA Logo" style="height: 36px; width: auto;">
     </div>
-    <ul class="navbut">
-      <li><a href="index.html"><button class="navbuttons">Home</button></a></li>
-      <li><a href="#about"><button class="navbuttons">About</button></a></li>
-      <li><a href="contact.html"><button class="navbuttons">Contact</button></a></li>
+    <label  id="hamburger" for="input"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></label>
+    <input  id ="input" type="checkbox">
+    <div class="dropdown-content"> 
+      <a href="#top"><button class="navbuttons" href="about.html">Home</button></a>
+      <a href="#about"><button class="navbuttons" href="about.html">About</button></a>
+      <a href="contact.html"><button class="navbuttons" href="#contact">Contact</button></a>
+      <a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons">Alumni Cell</button></a>
+      <a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons" href="">Campus Tour</button></a>
+      <a href="placement.html"><button class="navbuttons">Placements</button></a>
+      <a href="event.html" ><button class="navbuttons" href="events.html">Events</button></a>
+    </div>
+    </input>
+    <div class="navbut">
+      <li><a href="index.html"><button class="navbuttons" href="about.html">Home</button></a></li>
+      <li><a href="#about"><button class="navbuttons" href="about.html">About</button></a></li>
+      <li><a href="contact.html"><button class="navbuttons" href="#contact">Contact</button></a></li>
       <li><a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons">Alumni Cell</button></a></li>
-      <li><a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons" href="">360 Tour</button></li></a>
+      <li><a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons" href="">Campus Tour</button></li></a>
       <li><a href="placement.html"><button class="navbuttons">Placements</button></a></li>
-      <li><a href="event.html" ><button class="navbuttons">Events</button></a></li>
-    </ul>
+      <li><a href="event.html" ><button class="navbuttons" href="events.html">Events</button></li></a>
+    </div>
+    <div class="dropdown-content-small">
+      <a href="#top"><button class="navbuttons-small" href="about.html">Home</button></a>
+      <a href="#about"><button class="navbuttons-small" href="about.html">About</button></a>
+      <a href="contact.html"><button class="navbuttons-small" href="#contact">Contact</button></a>
+      <a href="https://lnct.ac.in/alumni-cell/"><button class="navbuttons-small">Alumni Cell</button></a>
+      <a href="https://tour.lnct.ac.in/LNCT/" ><button class="navbuttons-small" href="">Campus Tour</button></a>
+      <a href="placement.html"><button class="navbuttons-small">Placements</button></a>
+      <a href="event.html" ><button class="navbuttons-small" href="events.html">Events</button></a>
+    </div>
   </nav>
 
   <!-- CONTACT CARDS -->
@@ -251,7 +331,7 @@
       <p><b>📞 RECEPTION:</b> 0755-6185300, 0755-6185300/1/2/3/4/5</p>
       <p><b>📞 ADMISSION CELL:</b> 7440777111, 7201800001, 0755-6185350, 0755-6685400</p>
       <p><b>📞 TRAINING & PLACEMENT CELL:</b> 9826062730, 0755-6185341</p>
-      <p><b>✉️ EMAIL:</b> info@lnct.ac.in, admission@lnct.ac.in, jobs@lnct.ac.in</p>
+      <p><b>✉️ EMAIL:</b>info@lnct.ac.in, admission@lnct.ac.in, jobs@lnct.ac.in</p>
       <p><b>📍 ADDRESS:</b> LNCT Campus, Kalchuri Nagar, (P.O. Kolua), Raisen Road, Bhopal – 462022 (M.P.)</p>
     </div>
 
@@ -336,10 +416,6 @@
   </div>
 </div>
 
-<div class="admission-bar">
-  <a href="https://admissions.lnct.ac.in/">Admission Open</a>
-</div>
-
 
   <!-- FOOTER -->
   <footer>
@@ -384,9 +460,9 @@
       <div id ="textfoot">
         <div class="credits">
           <p>Made by - Team GUI</p>
-          <li>Paawan Singhai-Mob No.+91 7400613224</li>
-          <li>Utkrishta Singoria-Mob No.+91 98279 02612</li>
-          <li>Harshit Ringe-Mob No.+91 8878545709</li>
+          <li>Paawan Singhai <svg class="phone"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>+91 7400613224</li>
+          <li>Utkrishta Singoria<svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>+91 98279 02612</li>
+          <li>Harshit Ringe <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>+91 8878545709</li>
         </div> 
       </div>
       <div id="copyright"><p>&copy; 2025 LNCT. All rights reserved.</p></div>  
@@ -415,5 +491,3 @@
 
 </body>
 </html>
-
-
