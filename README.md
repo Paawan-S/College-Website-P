@@ -223,4 +223,63 @@ Footer	Contact details + social media links
 Admission Bar	Prominent link to the admission portal
 JavaScript	Enables contact toggle interaction
 
+CONTACT.HTML
 
+1. Head Section
+Sets up the page title, character encoding, and mobile responsiveness.
+
+Includes internal CSS styling that defines the look of the entire page, such as colors, layout, fonts, and responsiveness.
+
+2. Body Background
+Displays a full-screen background image of the LNCT campus.
+
+A semi-transparent white overlay is used on top of the background to make text and other elements more readable.
+
+3. Sticky Navigation Bar
+Located at the top of the page and stays fixed while scrolling.
+
+Contains two logos (LNCT and NBA).
+
+Includes buttons that link to various site pages like Home, About, Contact, Alumni Cell, Placements, Events, and a virtual 360° tour.
+
+4. Main Page Title
+Displays a centered heading that reads “LNCT Group of Colleges - Contact Information” to inform users of the page's purpose.
+
+5. Contact Cards Grid
+A responsive grid layout that organizes contact information into individual cards.
+
+Each card provides contact details for a specific LNCT campus or department (e.g., admission, reception, placement, and regional offices).
+
+Includes phone numbers, emails, addresses, and website links.
+
+6. Quick Contact Button
+A floating button at the bottom right of the screen that expands when clicked.
+
+Offers two quick-access options: calling a number or sending an email.
+
+Makes it easy for users (especially on mobile) to reach out instantly.
+
+7. Admission Open Side Bar
+A vertical red bar fixed to the right edge of the screen.
+
+Links directly to the LNCT admissions portal for easy access to the application process.
+
+Always visible as users scroll the page.
+
+8. Footer Section
+Displays contact information again for clarity and accessibility.
+
+Includes icons and labels for reception, admission, placement cell, email, and physical address.
+
+Features social media links (Instagram, YouTube, Facebook) using icons.
+
+Ends with a developer credit section listing the names and contact numbers of the development team (Team GUI).
+
+Shows a copyright notice.
+
+9. JavaScript Functionality
+Adds interactivity to the quick contact button.
+
+Allows the contact menu to toggle open and closed.
+
+Automatically hides the menu if the user clicks anywhere outside of it.
