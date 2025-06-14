@@ -283,3 +283,67 @@ Adds interactivity to the quick contact button.
 Allows the contact menu to toggle open and closed.
 
 Automatically hides the menu if the user clicks anywhere outside of it.
+
+PLACEMENT.HTML
+
+1. Page Setup (Head)
+Sets the document's character encoding and responsive layout for mobile devices.
+
+Applies embedded CSS to style the page, defining variables, fonts, layout behavior, colors, and responsiveness.
+
+2. Page Background and Overlay
+Displays a fixed background image of the LNCT campus.
+
+Adds a white semi-transparent overlay over the background to improve readability of text and content.
+
+3. Navigation Bar
+A fixed top navigation bar with LNCT and NBA logos.
+
+Contains buttons linking to key site pages like Home, About, Contact, Alumni Cell, Placements, and Events.
+
+Styled with a gradient background and slight blur effect.
+
+4. Main Content Section
+Placed Students Gallery:
+A heading and a grid of student placement photos, representing successful alumni.
+
+Placement Highlights:
+A grid of info cards showing key statistics such as:
+
+Top recruiting companies
+
+Average and highest salary packages
+
+Placement rate percentages
+
+Internship opportunities
+
+5. Admission Bar
+A fixed vertical red tab on the right side labeled "Admission Open."
+
+Clicking it links directly to the LNCT admissions portal.
+
+Always visible as users scroll.
+
+6. Quick Contact Button
+A floating contact button on the bottom right corner.
+
+When clicked, shows options to call or email.
+
+Useful for quick mobile-friendly interaction.
+
+7. Footer Section
+Displays detailed contact information including phone numbers, email addresses, and the LNCT campus location.
+
+Uses icons for phones, email, and address.
+
+Shows social media links (Instagram, YouTube, Facebook) as SVG icons.
+
+Includes a “Made by Team GUI” credit with team member names and phone numbers.
+
+Ends with a copyright.
+
+8. JavaScript Functionality
+Enables toggling of the quick contact menu.
+
+Hides the contact menu if the user clicks outside of it, improving user experience.
