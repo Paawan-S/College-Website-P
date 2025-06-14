@@ -1,4 +1,4 @@
-INDEX.HTML 
+**INDEX.HTML**
 
 🔹 head Section
 
@@ -132,7 +132,7 @@ Phone numbers for reception and admission
 Icons for clarity
 
 
-EVENTS.HTML
+**EVENTS.HTML**
 
 🔹 1. <!DOCTYPE html> + <html> tag
 Declares the document as HTML5 and sets the page's language to English.
@@ -223,7 +223,7 @@ Footer	Contact details + social media links
 Admission Bar	Prominent link to the admission portal
 JavaScript	Enables contact toggle interaction
 
-CONTACT.HTML
+**CONTACT.HTML**
 
 1. Head Section
 Sets up the page title, character encoding, and mobile responsiveness.
@@ -284,7 +284,7 @@ Allows the contact menu to toggle open and closed.
 
 Automatically hides the menu if the user clicks anywhere outside of it.
 
-PLACEMENT.HTML
+**PLACEMENT.HTML**
 
 1. Page Setup (Head)
 Sets the document's character encoding and responsive layout for mobile devices.
@@ -347,3 +347,17 @@ Ends with a copyright.
 Enables toggling of the quick contact menu.
 
 Hides the contact menu if the user clicks outside of it, improving user experience.
+
+**WORKING.JS**
+
+It first checks the browser’s local storage to see if dark mode was previously turned on by the user.
+
+It finds the button or element on the page that the user will click to switch between dark mode and normal mode.
+
+There’s a function that turns dark mode on by adding a special style class to the webpage and saving this choice in local storage.
+
+Another function turns dark mode off by removing that style class and updating local storage to show dark mode is no longer active.
+
+When the page loads, it automatically applies dark mode if the user had it enabled before.
+
+Finally, it listens for clicks on the toggle button, and each time it’s clicked, it switches dark mode on or off depending on the current state.
